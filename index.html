@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Open d'Halloween RoboCupJunior 2026 — Bordeaux</title>
-  <meta name="description" content="Proposition d'un Open d'Halloween RoboCupJunior à Bordeaux, du 29 octobre au 1er novembre 2026 : terrains RSK et Rescue en accès libre pour découvrir, s'entraîner et organiser des matchs amicaux." />
+  <meta name="description" content="Proposition d'un Open d'Halloween RoboCupJunior à Bordeaux, du 29 octobre au 1er novembre 2026 : terrains RSK et Rescue pour découvrir, s'entraîner et jouer des matchs amicaux." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎃</text></svg>" />
 
   <!-- Bootstrap 5 + icônes -->
@@ -232,6 +232,15 @@
       color: #fff;
       margin-bottom: 1rem;
     }
+    .reason-card { max-width: 320px; margin: 0 auto; }
+    .reason-card .fun-icon {
+      width: 44px; height: 44px;
+      font-size: 1.2rem;
+      border-radius: 14px;
+      margin: 0 auto .7rem;
+    }
+    .reason-card p { font-size: .93rem; opacity: .85; }
+
     .bg-pumpkin { background: linear-gradient(135deg, var(--pumpkin), #ff6b35); }
     .bg-mist    { background: linear-gradient(135deg, var(--mist), #6a2fb5); }
     .bg-pitch   { background: linear-gradient(135deg, var(--pitch-light), var(--pitch)); }
@@ -417,9 +426,8 @@
 
     <h1>Open d'Halloween RoboCupJunior</h1>
     <p class="lead mb-1">
-      Quatre jours de robotique pour <strong>découvrir</strong> une ligue,
-      <strong>s'entraîner</strong> en équipe et disputer des
-      <strong>matchs amicaux</strong>, dans une ambiance de fête.
+      Quatre jours pour <strong>découvrir</strong> une ligue, <strong>s'entraîner</strong>
+      et disputer des <strong>matchs amicaux</strong>.
     </p>
 
     <div class="hero-facts">
@@ -444,44 +452,30 @@
   <div class="container">
     <h2 class="section-title">Un open, trois bonnes raisons de venir</h2>
     <span class="title-underline"></span>
-    <p class="section-subtitle">
-      L'Open d'Halloween n'est pas une compétition officielle&nbsp;: c'est un espace ouvert où les terrains
-      sont montés, les arbitres bienveillants et la pression inexistante. Venez avec vos robots, votre équipe,
-      ou simplement votre curiosité.
+    <p class="section-subtitle mb-4">
+      Pas une compétition officielle&nbsp;: des terrains montés, aucune pression.
     </p>
 
-    <div class="row g-4">
+    <div class="row g-3 justify-content-center">
       <div class="col-md-4">
-        <div class="fun-card p-4">
+        <div class="fun-card reason-card p-3 text-center">
           <div class="fun-icon bg-pumpkin"><i class="bi bi-lightbulb"></i></div>
-          <h3 class="h5">Découvrir une ligue</h3>
-          <p class="mb-0">
-            Jamais touché à un robot de RoboCupJunior&nbsp;? Les terrains sont accessibles, du matériel de
-            démonstration est disponible et les équipes présentes sont là pour expliquer. Idéal pour les
-            enseignants, clubs et familles qui veulent se lancer.
-          </p>
+          <h3 class="h6 mb-1">Découvrir une ligue</h3>
+          <p class="mb-0">Terrains accessibles et robots de démonstration sur place.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="fun-card p-4">
+        <div class="fun-card reason-card p-3 text-center">
           <div class="fun-icon bg-mist"><i class="bi bi-tools"></i></div>
-          <h3 class="h5">S'entraîner en équipe</h3>
-          <p class="mb-0">
-            Difficile de tester son robot sans terrain à taille réelle. Réservez un créneau, installez votre
-            stand, débuggez, mesurez, recommencez&nbsp;: l'espace est fait pour travailler dans les conditions
-            de la compétition.
-          </p>
+          <h3 class="h6 mb-1">S'entraîner</h3>
+          <p class="mb-0">Des créneaux sur de vrais terrains pour régler son robot.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="fun-card p-4">
+        <div class="fun-card reason-card p-3 text-center">
           <div class="fun-icon bg-pitch"><i class="bi bi-trophy"></i></div>
-          <h3 class="h5">Jouer des matchs amicaux</h3>
-          <p class="mb-0">
-            Envie de se confronter&nbsp;? Les équipes présentes peuvent monter à la volée un mini-tournoi,
-            des poules ou des défis. Résultats sans enjeu, retours d'expérience garantis&nbsp;— et costumes
-            très fortement encouragés.
-          </p>
+          <h3 class="h6 mb-1">Jouer des matchs</h3>
+          <p class="mb-0">Mini-tournois improvisés, sans enjeu. Costumes bienvenus.</p>
         </div>
       </div>
     </div>
@@ -500,9 +494,8 @@
         <span class="hero-badge mb-3">🕹️ En action</span>
         <h2 class="section-title text-start mt-3">Des robots, un ballon, et beaucoup de citrouilles</h2>
         <p class="fs-5 mb-4" style="opacity:.92;">
-          Le Robot Soccer Kit met en jeu des robots omnidirectionnels suivis par caméra&nbsp;: on programme
-          la stratégie, le terrain fait le reste. C'est rapide à prendre en main, spectaculaire à regarder,
-          et parfait pour un premier contact avec la RoboCupJunior.
+          Des robots omnidirectionnels suivis par caméra&nbsp;: on programme la stratégie,
+          le terrain fait le reste.
         </p>
         <a class="btn btn-pumpkin" href="#ligues"><i class="bi bi-controller"></i> Voir les ligues proposées</a>
       </div>
@@ -516,9 +509,8 @@
     <h2 class="section-title">Ligues &amp; terrains mis à disposition</h2>
     <span class="title-underline"></span>
     <p class="section-subtitle">
-      La proposition prévoit <strong>deux terrains de Robot Soccer Kit</strong> et
-      <strong>un terrain de Rescue</strong>. Selon le nombre d'équipes intéressées, d'autres terrains
-      ou d'autres ligues pourraient s'ajouter.
+      <strong>Deux terrains de Robot Soccer Kit</strong> et <strong>un terrain de Rescue</strong>,
+      voire plus selon le nombre d'équipes.
     </p>
 
     <div class="row g-4">
@@ -529,8 +521,8 @@
             <span class="league-tag"><i class="bi bi-2-circle"></i> 2 terrains prévus</span>
             <h3 class="h4">Robot Soccer Kit (RSK)</h3>
             <p>
-              Du football de robots avec des machines identiques pour tout le monde&nbsp;: la différence
-              se joue sur le code. Suivi par caméra, API Python, et des matchs qui s'enchaînent vite.
+              Du football de robots avec des machines identiques&nbsp;: la différence se joue sur le code.
+              Suivi par caméra, API Python.
             </p>
             <ul class="league-list">
               <li>Parfait pour débuter&nbsp;: pas de mécanique à construire</li>
@@ -548,8 +540,8 @@
             <span class="league-tag mist"><i class="bi bi-1-circle"></i> 1 terrain prévu</span>
             <h3 class="h4">Rescue</h3>
             <p>
-              Un robot autonome suit une ligne, franchit des obstacles et retrouve des victimes dans
-              une zone d'évacuation. Un vrai terrain de jeu pour les capteurs, la mécanique et l'algorithmique.
+              Un robot autonome suit une ligne, franchit des obstacles et retrouve des victimes
+              dans une zone d'évacuation.
             </p>
             <ul class="league-list">
               <li>Parcours modulable selon les niveaux</li>
@@ -567,9 +559,8 @@
             <span class="league-tag soon">Peut-être plus&hellip;</span>
             <h3 class="h5 mb-1">D'autres ligues&nbsp;? À vous de nous le dire</h3>
             <p class="mb-0">
-              OnStage, Soccer standard, Maze&hellip; Si suffisamment d'équipes se manifestent pour une autre
-              ligue, nous étudierons la possibilité de monter le terrain correspondant. Indiquez-le dans le
-              formulaire de déclaration d'intérêt.
+              OnStage, Soccer standard, Maze&hellip; Si assez d'équipes le demandent, le terrain
+              correspondant pourra être monté. Indiquez-le dans le formulaire.
             </p>
           </div>
         </div>
@@ -584,8 +575,7 @@
     <h2 class="section-title">Programme prévisionnel</h2>
     <span class="title-underline"></span>
     <p class="section-subtitle">
-      Le déroulé exact dépendra du nombre d'équipes et de leurs souhaits. Voici l'esquisse envisagée
-      sur les quatre journées.
+      Esquisse&nbsp;: le déroulé final dépendra des équipes présentes.
     </p>
 
     <div class="row g-5 align-items-start">
@@ -594,39 +584,36 @@
           <div class="timeline-item">
             <p class="timeline-date mb-1">Jeudi 29 octobre 2026</p>
             <h3 class="h5">Installation &amp; premiers essais</h3>
-            <p class="mb-0">Montage des terrains, accueil des équipes, prise en main libre. Séance de découverte pour les nouveaux venus.</p>
+            <p class="mb-0">Montage des terrains, accueil des équipes, découverte pour les nouveaux venus.</p>
           </div>
           <div class="timeline-item">
             <p class="timeline-date mb-1">Vendredi 30 octobre 2026</p>
             <h3 class="h5">Entraînement libre</h3>
-            <p class="mb-0">Créneaux réservables sur les terrains, ateliers courts et coup de main technique entre équipes.</p>
+            <p class="mb-0">Créneaux réservables sur les terrains, entraide technique entre équipes.</p>
           </div>
           <div class="timeline-item">
             <p class="timeline-date mb-1">Samedi 31 octobre 2026 &mdash; 🎃 Halloween</p>
             <h3 class="h5">Journée des matchs amicaux</h3>
-            <p class="mb-0">Mini-tournois RSK et défis Rescue, robots et équipes costumés, ouverture au public en fin de journée.</p>
+            <p class="mb-0">Mini-tournois RSK et défis Rescue, robots et équipes costumés.</p>
           </div>
           <div class="timeline-item">
             <p class="timeline-date mb-1">Dimanche 1<sup>er</sup> novembre 2026</p>
             <h3 class="h5">Défis ouverts &amp; rangement</h3>
-            <p class="mb-0">Dernières rencontres, bilan collectif, préparation de la saison à venir et démontage.</p>
+            <p class="mb-0">Dernières rencontres, bilan collectif et démontage.</p>
           </div>
         </div>
       </div>
 
       <div class="col-lg-5">
         <div class="fun-card p-4">
-          <div class="fun-icon bg-mist"><i class="bi bi-link-45deg"></i></div>
-          <h3 class="h5">Un événement conjoint</h3>
-          <p>
-            L'Open d'Halloween se tiendrait aux <strong>mêmes dates et au même endroit</strong> que le
-            <em>Rock Climbing Robots Workshop 2026</em>, un atelier international consacré aux robots grimpeurs.
-          </p>
+          <div class="fun-icon bg-mist"><i class="bi bi-calendar-week"></i></div>
+          <h3 class="h5">À la carte</h3>
           <p class="mb-3">
-            De quoi croiser des chercheurs, voir d'autres robots à l'œuvre et profiter d'une logistique commune.
+            Venez sur une journée ou sur les quatre. Précisez vos souhaits dans le formulaire&nbsp;:
+            créneaux, ligue, nombre de robots.
           </p>
-          <a class="btn btn-ghost btn-sm" href="https://rock-climbing-robots.github.io" target="_blank" rel="noopener" style="border-color:var(--mist); color:var(--mist);">
-            <i class="bi bi-box-arrow-up-right"></i> Voir le workshop
+          <a class="btn btn-ghost btn-sm" href="https://forms.gle/6GPzyiCAAcLjmW2a7" target="_blank" rel="noopener" style="border-color:var(--mist); color:var(--mist);">
+            <i class="bi bi-clipboard-check"></i> Déclarer son intérêt
           </a>
         </div>
       </div>
@@ -696,8 +683,8 @@
       <div class="mb-3" style="font-size:2.6rem;">🎃 🤖 👻</div>
       <h2 class="section-title mb-2">Aidez-nous à confirmer l'événement</h2>
       <p class="fs-5 mb-4" style="opacity:.92;">
-        Rien n'est encore acté&nbsp;: c'est le nombre d'équipes intéressées qui décidera si l'Open d'Halloween
-        a lieu, et avec combien de terrains. Deux minutes de formulaire, aucun engagement.
+        C'est le nombre d'équipes intéressées qui décidera si l'Open a lieu.
+        Deux minutes de formulaire, aucun engagement.
       </p>
       <div class="d-flex flex-wrap justify-content-center gap-3">
         <a class="btn btn-pumpkin btn-lg" href="https://forms.gle/6GPzyiCAAcLjmW2a7" target="_blank" rel="noopener">
@@ -729,9 +716,8 @@
             </h3>
             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Non. Cette page décrit une <strong>proposition</strong>. Les dates, le lieu et les terrains
-                annoncés sont ceux envisagés, mais l'organisation ne sera lancée que si suffisamment
-                d'équipes déclarent leur intérêt.
+                Non. Cette page décrit une <strong>proposition</strong>&nbsp;: l'organisation ne sera
+                lancée que si suffisamment d'équipes déclarent leur intérêt.
               </div>
             </div>
           </div>
@@ -744,9 +730,8 @@
             </h3>
             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Pas du tout. L'un des objectifs est justement de faire <strong>découvrir</strong> les ligues.
-                Des robots de démonstration seront disponibles sur les terrains de Robot Soccer Kit et vous
-                pourrez discuter avec les équipes présentes.
+                Non&nbsp;: faire <strong>découvrir</strong> les ligues est justement l'un des objectifs.
+                Des robots de démonstration seront disponibles sur les terrains RSK.
               </div>
             </div>
           </div>
@@ -759,9 +744,8 @@
             </h3>
             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Non. Il s'agit d'un <strong>open amical</strong>&nbsp;: entraînement libre, découverte et
-                matchs sans enjeu de qualification. Une excellente répétition générale avant les échéances
-                officielles de la saison.
+                Non&nbsp;: un <strong>open amical</strong>, sans enjeu de qualification. Une bonne
+                répétition avant les échéances de la saison.
               </div>
             </div>
           </div>
@@ -774,8 +758,7 @@
             </h3>
             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Oui. Vous pouvez venir sur la ou les journées qui vous arrangent&nbsp;; précisez-le dans le
-                formulaire pour que nous puissions organiser les créneaux sur les terrains.
+                Oui. Précisez vos journées dans le formulaire, pour organiser les créneaux.
               </div>
             </div>
           </div>
@@ -788,8 +771,7 @@
             </h3>
             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Obligatoires, non. Vivement encouragés, oui &mdash; pour les humains comme pour les robots.
-                C'est Halloween après tout&nbsp;! 🎃
+                Non, mais vivement encouragés &mdash; pour les humains comme pour les robots. 🎃
               </div>
             </div>
           </div>
@@ -805,10 +787,7 @@
   <div class="container">
     <div style="font-size:1.8rem;" class="mb-2">🎃 🤖 🦇</div>
     <p class="mb-1 font-display fs-5">Open d'Halloween RoboCupJunior &mdash; Bordeaux, 2026</p>
-    <p class="mb-3" style="opacity:.75;">
-      Proposition d'événement, organisée conjointement avec le
-      <a href="https://rock-climbing-robots.github.io" target="_blank" rel="noopener">Rock Climbing Robots Workshop 2026</a>.
-    </p>
+    <p class="mb-3" style="opacity:.75;">Proposition d'événement &mdash; à confirmer.</p>
     <p class="mb-0">
       <a href="https://forms.gle/6GPzyiCAAcLjmW2a7" target="_blank" rel="noopener"><i class="bi bi-clipboard-check"></i> Déclarer son intérêt</a>
       <span class="mx-2" style="opacity:.4;">•</span>
