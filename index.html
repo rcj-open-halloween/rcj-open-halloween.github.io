@@ -171,7 +171,7 @@
       user-select: none;
     }
     .lane-top    { height: 158px; }
-    .lane-bottom { height: 200px; }
+    .lane-bottom { height: 216px; }
 
     .hero-content {
       flex: 1 0 auto;
@@ -193,20 +193,32 @@
       display: block;
       width: 100%;
       height: auto;
-      filter: drop-shadow(0 10px 12px rgba(0,0,0,.45));
-      backface-visibility: hidden;
+      /* translation pure : le compositeur n'a pas à ré-échantillonner l'image */
       animation: bob 2.4s ease-in-out infinite;
+    }
+    .bot.flip img { transform: scaleX(-1); }
+
+    /* Ombre portée au sol, dessinée à part */
+    .bot::after {
+      content: "";
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      bottom: -6px;
+      height: 16px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,.5) 0%, rgba(0,0,0,.28) 45%, transparent 72%);
+      animation: shade 2.4s ease-in-out infinite;
     }
 
     @keyframes bob {
-      0%, 100% { transform: translateY(0)     rotate(-1deg); }
-      50%      { transform: translateY(-10px) rotate(1deg); }
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-9px); }
     }
-    @keyframes bob-flip {
-      0%, 100% { transform: scaleX(-1) translateY(0)     rotate(1deg); }
-      50%      { transform: scaleX(-1) translateY(-10px) rotate(-1deg); }
+    @keyframes shade {
+      0%, 100% { opacity: 1;  transform: scaleX(1); }
+      50%      { opacity: .6; transform: scaleX(.88); }
     }
-    .bot.flip img { animation-name: bob-flip; }
 
     @keyframes drive-right {
       from { transform: translateX(-28vw); }
@@ -217,13 +229,13 @@
       to   { transform: translateX(-28vw); }
     }
 
-    .bot-1 { bottom: 8px;  width: 128px; animation: drive-right 21s linear infinite; }
-    .bot-4 { top: 2px;     width: 88px;  animation: drive-left  33s linear infinite -17s; opacity: .8; }
-    .bot-2 { top: 6px;     width: 108px; animation: drive-left  27s linear infinite -9s; opacity: .92; }
-    .bot-3 { bottom: 4px;  width: 168px; animation: drive-right 17s linear infinite -6s; }
-    .bot-2 img { animation-duration: 3.1s; }
-    .bot-3 img { animation-duration: 1.9s; }
-    .bot-4 img { animation-duration: 3.6s; }
+    .bot-1 { bottom: 30px; width: 128px; animation: drive-right 21s linear infinite; }
+    .bot-4 { top: 6px;     width: 88px;  animation: drive-left  33s linear infinite -17s; opacity: .8; }
+    .bot-2 { top: 10px;    width: 108px; animation: drive-left  27s linear infinite -9s; opacity: .92; }
+    .bot-3 { bottom: 26px; width: 168px; animation: drive-right 17s linear infinite -6s; }
+    .bot-2 img, .bot-2::after { animation-duration: 3.1s; }
+    .bot-3 img, .bot-3::after { animation-duration: 1.9s; }
+    .bot-4 img, .bot-4::after { animation-duration: 3.6s; }
 
     /* Ballon poussé par le gros robot */
     .bot .ball {
@@ -281,7 +293,7 @@
 
     @media (max-width: 767.98px) {
       .lane-top    { height: 104px; }
-      .lane-bottom { height: 132px; }
+      .lane-bottom { height: 148px; }
       .bot-1 { width: 84px; }
       .bot-2 { width: 70px; }
       .bot-3 { width: 108px; }
@@ -531,8 +543,8 @@
 <header id="hero">
   <!-- Couloir haut -->
   <div class="lane lane-top" aria-hidden="true">
-    <div class="bot bot-4 flip"><img src="images/robot4.png" alt="" width="176" height="147" /></div>
-    <div class="bot bot-2 flip"><img src="images/robot2.png" alt="" width="216" height="180" /></div>
+    <div class="bot bot-4 flip"><img src="images/robot4.png" alt="" width="220" height="184" decoding="async" /></div>
+    <div class="bot bot-2 flip"><img src="images/robot2.png" alt="" width="270" height="225" decoding="async" /></div>
     <span class="ghost" style="top:8px;">👻</span>
     <span class="floaty small" style="left:3%;  top:4px;  animation-delay:.4s;">🕸️</span>
     <span class="floaty small" style="left:95%; top:6px;  animation-delay:1.5s;">🕸️</span>
@@ -569,12 +581,12 @@
 
   <!-- Couloir bas -->
   <div class="lane lane-bottom" aria-hidden="true">
-    <div class="bot bot-1"><img src="images/robot1.png" alt="" width="256" height="215" /></div>
+    <div class="bot bot-1"><img src="images/robot1.png" alt="" width="320" height="268" decoding="async" /></div>
     <div class="bot bot-3">
-      <img src="images/robot3.png" alt="" width="336" height="281" />
+      <img src="images/robot3.png" alt="" width="420" height="351" decoding="async" />
       <span class="ball">⚽</span>
     </div>
-    <span class="ghost g2" style="bottom:12px;">👻</span>
+    <span class="ghost g2" style="top:6px;">👻</span>
     <span class="floaty big"   style="left:5%;  bottom:6px;  animation-delay:0s;">🎃</span>
     <span class="floaty big"   style="left:90%; bottom:10px; animation-delay:1.9s;">🎃</span>
     <span class="bouncer"      style="left:30%; bottom:8px;  animation-delay:0s;">⚽</span>
