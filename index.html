@@ -412,6 +412,19 @@
     }
     #video-showcase .container { position: relative; z-index: 2; padding: 4.5rem 12px; }
 
+    /* ---------- Aussi sur place ---------- */
+    .rcr-media { display: grid; grid-template-columns: 3fr 2fr; gap: .6rem; height: 100%; min-height: 260px; }
+    .rcr-media video, .rcr-media img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
+    }
+    @media (max-width: 575.98px) {
+      .rcr-media { grid-template-columns: 1fr; }
+      .rcr-media video, .rcr-media img { height: 220px; }
+    }
+
     /* ---------- Timeline ---------- */
     .timeline { position: relative; padding-left: 2.2rem; }
     .timeline::before {
@@ -444,25 +457,6 @@
     .info-table td { padding: .6rem .4rem; vertical-align: top; }
     .info-table tr + tr { border-top: 1px dashed rgba(90,59,34,.25); }
     .map-frame { border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.18); }
-
-    /* ---------- Appel à intérêt ---------- */
-    #interest {
-      background:
-        radial-gradient(circle at 15% 25%, rgba(255,140,26,.35) 0%, transparent 45%),
-        radial-gradient(circle at 85% 75%, rgba(155,93,229,.35) 0%, transparent 45%),
-        linear-gradient(135deg, var(--night) 0%, #123524 100%);
-      color: #fff;
-      text-align: center;
-    }
-    .cta-box {
-      background: rgba(255,255,255,.07);
-      border: 2px dashed rgba(255,179,71,.5);
-      border-radius: 26px;
-      padding: 2.6rem 1.6rem;
-      max-width: 820px;
-      margin: 0 auto;
-      backdrop-filter: blur(4px);
-    }
 
     /* ---------- FAQ ---------- */
     .accordion-button {
@@ -509,14 +503,10 @@
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
         <li class="nav-item"><a class="nav-link" href="#concept">Le concept</a></li>
         <li class="nav-item"><a class="nav-link" href="#ligues">Ligues &amp; terrains</a></li>
+        <li class="nav-item"><a class="nav-link" href="#aussi">Aussi sur place</a></li>
         <li class="nav-item"><a class="nav-link" href="#programme">Programme</a></li>
         <li class="nav-item"><a class="nav-link" href="#infos">Infos pratiques</a></li>
         <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-        <li class="nav-item ms-lg-2">
-          <a class="btn btn-pumpkin btn-sm px-3 py-2" href="https://forms.gle/6GPzyiCAAcLjmW2a7" target="_blank" rel="noopener">
-            <i class="bi bi-hand-index-thumb"></i> Je suis intéressé
-          </a>
-        </li>
       </ul>
     </div>
   </div>
@@ -548,13 +538,10 @@
     <div class="hero-facts">
       <span class="hero-fact"><i class="bi bi-calendar-event"></i>29 octobre &ndash; 1<sup>er</sup> novembre 2026</span>
       <span class="hero-fact"><i class="bi bi-geo-alt"></i>Complexe sportif SMART, Bordeaux</span>
-      <span class="hero-fact"><i class="bi bi-people"></i>Entrée libre pour les équipes</span>
+      <span class="hero-fact"><i class="bi bi-people"></i>Entrée libre</span>
     </div>
 
     <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-      <a class="btn btn-pumpkin btn-lg" href="https://forms.gle/6GPzyiCAAcLjmW2a7" target="_blank" rel="noopener">
-        <i class="bi bi-clipboard-check"></i> Déclarer l'intérêt de mon équipe
-      </a>
       <a class="btn btn-ghost btn-lg" href="#concept">
         <i class="bi bi-arrow-down-circle"></i> En savoir plus
       </a>
@@ -690,7 +677,7 @@
             <h3 class="h5 mb-1">D'autres ligues&nbsp;? À vous de nous le dire</h3>
             <p class="mb-0">
               OnStage, Soccer standard, Maze&hellip; Si assez d'équipes le demandent, le terrain
-              correspondant pourra être monté. Indiquez-le dans le formulaire.
+              correspondant pourra être monté. <a href="mailto:gregoire.passault@u-bordeaux.fr?subject=Open%20d'Halloween%20RoboCupJunior%202026">Écrivez-nous</a>.
             </p>
           </div>
         </div>
@@ -699,8 +686,74 @@
   </div>
 </section>
 
+<!-- ============================================ AUSSI SUR PLACE -->
+<section id="aussi">
+  <div class="container">
+    <h2 class="section-title">Aussi sur place</h2>
+    <span class="title-underline"></span>
+    <p class="section-subtitle">
+      Le complexe SMART accueille d'autres robots et d'autres passionnés pendant ces quatre jours.
+    </p>
+
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="fun-card p-3 p-md-4">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+              <div class="rcr-media">
+                <video autoplay muted loop playsinline preload="metadata" poster="images/rcr-climb-poster.jpg"
+                       aria-label="Robot humanoïde grimpant sur un mur en simulation">
+                  <source src="videos/rcr-climb.mp4" type="video/mp4" />
+                </video>
+                <img src="images/rcr-prototype.jpg" alt="Prototype de robot grimpeur devant un petit mur d'escalade" loading="lazy" />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <span class="league-tag mist"><i class="bi bi-calendar-event"></i> En même temps, au même endroit</span>
+              <h3 class="h4">Rock Climbing Robots Workshop 2026</h3>
+              <p>
+                Un atelier international et un hackathon où des équipes de Taïwan, d'Allemagne,
+                d'Écosse et de France tentent de faire <strong>grimper des robots humanoïdes</strong>
+                sur un petit mur d'escalade&nbsp;: perception, planification des prises et contrôle du corps entier.
+              </p>
+              <p class="mb-3">Une belle occasion de voir ce qui se fait en recherche, à deux pas des terrains.</p>
+              <a class="btn btn-ghost btn-sm" href="https://rock-climbing-robots.github.io/" target="_blank" rel="noopener" style="border-color:var(--mist); color:var(--mist);">
+                <i class="bi bi-box-arrow-up-right"></i> Découvrir le workshop
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="fun-card p-4">
+          <div class="fun-icon bg-pitch"><i class="bi bi-dribbble"></i></div>
+          <span class="league-tag soon">RoboCup Small Size League</span>
+          <h3 class="h5">L'équipe NAMeC en tests</h3>
+          <p class="mb-0">
+            L'équipe bordelaise de RoboCup <strong>SSL</strong> viendra tester ses robots sur place&nbsp;:
+            un aperçu du football de robots rapide et collectif qui attend les juniors après la RoboCupJunior.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="fun-card p-4">
+          <div class="fun-icon bg-pumpkin"><i class="bi bi-shop"></i></div>
+          <span class="league-tag">Stands associatifs</span>
+          <h3 class="h5">La Boussole de la Tech &amp; 123 Codage</h3>
+          <p class="mb-0">
+            Deux associations tiendront un stand pour faire découvrir le numérique, la robotique
+            et la programmation aux jeunes et à leurs familles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================================ PROGRAMME -->
-<section id="programme">
+<section id="programme" class="section-alt">
   <div class="container">
     <h2 class="section-title">Programme prévisionnel</h2>
     <span class="title-underline"></span>
@@ -738,13 +791,9 @@
         <div class="fun-card p-4">
           <div class="fun-icon bg-mist"><i class="bi bi-calendar-week"></i></div>
           <h3 class="h5">À la carte</h3>
-          <p class="mb-3">
-            Venez sur une journée ou sur les quatre. Précisez vos souhaits dans le formulaire&nbsp;:
-            créneaux, ligue, nombre de robots.
+          <p class="mb-0">
+            Venez sur une journée ou sur les quatre, selon vos disponibilités.
           </p>
-          <a class="btn btn-ghost btn-sm" href="https://forms.gle/6GPzyiCAAcLjmW2a7" target="_blank" rel="noopener" style="border-color:var(--mist); color:var(--mist);">
-            <i class="bi bi-clipboard-check"></i> Déclarer son intérêt
-          </a>
         </div>
       </div>
     </div>
@@ -752,7 +801,7 @@
 </section>
 
 <!-- ============================================ INFOS PRATIQUES -->
-<section id="infos" class="section-alt">
+<section id="infos">
   <div class="container">
     <h2 class="section-title">Infos pratiques</h2>
     <span class="title-underline"></span>
@@ -779,7 +828,7 @@
             </tr>
             <tr>
               <td><i class="bi bi-cash-coin text-success me-1"></i><strong>Participation</strong></td>
-              <td>Gratuite pour les équipes (hébergement et repas à leur charge)</td>
+              <td>Entrée libre et gratuite, pour les équipes comme pour les visiteurs de passage (hébergement et repas à la charge des équipes)</td>
             </tr>
             <tr>
               <td><i class="bi bi-question-circle-fill text-warning me-1"></i><strong>Statut</strong></td>
@@ -806,30 +855,8 @@
   </div>
 </section>
 
-<!-- ============================================ APPEL A INTERET -->
-<section id="interest">
-  <div class="container">
-    <div class="cta-box">
-      <div class="mb-3" style="font-size:2.6rem;">🎃 🤖 👻</div>
-      <h2 class="section-title mb-2">Aidez-nous à confirmer l'événement</h2>
-      <p class="fs-5 mb-4" style="opacity:.92;">
-        C'est le nombre d'équipes intéressées qui décidera si l'Open a lieu.
-        Deux minutes de formulaire, aucun engagement.
-      </p>
-      <div class="d-flex flex-wrap justify-content-center gap-3">
-        <a class="btn btn-pumpkin btn-lg" href="https://forms.gle/6GPzyiCAAcLjmW2a7" target="_blank" rel="noopener">
-          <i class="bi bi-clipboard-check"></i> Remplir le formulaire d'intérêt
-        </a>
-        <a class="btn btn-ghost btn-lg" href="mailto:gregoire.passault@u-bordeaux.fr?subject=Open%20d'Halloween%20RoboCupJunior%202026">
-          <i class="bi bi-envelope"></i> Nous écrire
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============================================ FAQ -->
-<section id="faq">
+<section id="faq" class="section-alt">
   <div class="container">
     <h2 class="section-title">Questions fréquentes</h2>
     <span class="title-underline"></span>
@@ -888,7 +915,7 @@
             </h3>
             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
               <div class="accordion-body">
-                Oui. Précisez vos journées dans le formulaire, pour organiser les créneaux.
+                Oui, venez sur les journées qui vous conviennent.
               </div>
             </div>
           </div>
@@ -919,8 +946,6 @@
     <p class="mb-1 font-display fs-5">Open d'Halloween RoboCupJunior &mdash; Bordeaux, 2026</p>
     <p class="mb-3" style="opacity:.75;">Proposition d'événement &mdash; à confirmer.</p>
     <p class="mb-0">
-      <a href="https://forms.gle/6GPzyiCAAcLjmW2a7" target="_blank" rel="noopener"><i class="bi bi-clipboard-check"></i> Déclarer son intérêt</a>
-      <span class="mx-2" style="opacity:.4;">•</span>
       <a href="mailto:gregoire.passault@u-bordeaux.fr"><i class="bi bi-envelope"></i> gregoire.passault@u-bordeaux.fr</a>
     </p>
   </div>
